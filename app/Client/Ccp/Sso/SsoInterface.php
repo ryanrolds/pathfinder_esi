@@ -25,4 +25,9 @@ interface SsoInterface {
      */
     public function getVerifyAuthorizationCodeEndpointURI() : string;
 
+    /**
+     * @return string
+     */
+    public function getJWKSEndpointURI() : string;
+
 }

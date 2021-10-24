@@ -76,6 +76,27 @@ class Sso extends Ccp\AbstractCcp implements SsoInterface {
     }
 
     /**
+     * get OAuth 2.0 JSON Web Key Set from CCP
+     * @return RequestConfig
+     */
+    protected function getJWKSRequest() : RequestConfig {
+        $requestOptions = [];
+
+        return new RequestConfig(
+            WebClient::newRequest('GET',  $this->getJWKSEndpointURI()),
+            $requestOptions,
+            function($body) : array {
+                $jwksData = [];
+                if(!$body->error){
+                    $jwksData = (new Mapper\Sso\JWKS($body))->getData();
+                }
+
+                return $jwksData;
+            }
+        );
+    }
+
+    /**
      * @return string
      */
     public function getAuthorizationEndpointURI() : string {
@@ -93,7 +114,14 @@ class Sso extends Ccp\AbstractCcp implements SsoInterface {
      * @return string
      */
     public function getVerifyAuthorizationCodeEndpointURI() : string {
-        return '/v2/oauth/token';
+        return '/oauth/token';
+    }
+
+    /**
+     * @return string
+     */
+    public function getJWKSEndpointURI() : string {
+        return '/oauth/jwks';
     }
 
     /**

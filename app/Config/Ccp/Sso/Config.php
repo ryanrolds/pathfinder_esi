@@ -10,5 +10,9 @@ class Config extends AbstractConfig {
     /**
      * @var array
      */
-    protected static $spec = [];
+    protected static $spec = [
+        'jwks' => [
+            'GET' => '/oauth/jwks'
+        ]
+    ];
 }
