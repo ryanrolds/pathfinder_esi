@@ -107,14 +107,14 @@ class Sso extends Ccp\AbstractCcp implements SsoInterface {
      * @return string
      */
     public function getVerifyUserEndpointURI() : string {
-        return '/v2/oauth/verify';
+        return '/oauth/verify';
     }
 
     /**
      * @return string
      */
     public function getVerifyAuthorizationCodeEndpointURI() : string {
-        return '/oauth/token';
+        return '/v2/oauth/token';
     }
 
     /**
