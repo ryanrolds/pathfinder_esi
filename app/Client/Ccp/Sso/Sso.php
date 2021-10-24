@@ -88,7 +88,7 @@ class Sso extends Ccp\AbstractCcp implements SsoInterface {
             function($body) : array {
                 $jwksData = [];
                 if(!$body->error){
-                    $jwksData = (new Mapper\Sso\JWKS($body))->getData();
+                    $jwksData = (array)$body;
                 }
 
                 return $jwksData;
