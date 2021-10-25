@@ -2,7 +2,7 @@
 
 Originally written by [Exodus4D](https://github.com/exodus4d/pathfinder_esi/), but has been recreated to support open-source forks since the oriiginal client is no longer maintained.
 
-This Web API client library is used by [_Pathfinder_](https://github.com/exodus4d/pathfinder) and handles all _ESI_ API requests.<br />
+This Web API client library is used by [_Pathfinder_](https://github.com/goryn-clade/pathfinder) and handles all _ESI_ API requests.<br />
 Additional APIs can easily be added and can be used side by side with their own configuration. Included clients:
 
 - _CCP ESI_ API client: [Esi.php](https://github.com/goryn-clade/pathfinder_esi/blob/master/app/Client/Ccp/Esi/Esi.php) 
