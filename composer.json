@@ -1,14 +1,14 @@
 {
-  "name": "tyrheimdaleve/pathfinder_esi",
+  "name": "goryn-clade/pathfinder_esi",
   "description": "ESI API library for Pathfinder",
   "type": "library",
-  "homepage": "https://github.com/tyrheimdaleve/pathfinder_esi",
+  "homepage": "https://github.com/goryn-clade/pathfinder_esi",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
     {
-      "name": "Mark Friedrich",
-      "email": "pathfinder@exodus4d.de"
+      "name": "Sam O'Neill",
+      "email": "samuel.p.oneill@gmail.com"
     }
   ],
   "config": {
@@ -18,7 +18,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/tyrheimdaleve/pathfinder_esi"
+      "url": "https://github.com/goryn-clade/pathfinder_esi"
     }
   ],
   "autoload": {
