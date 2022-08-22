@@ -939,10 +939,12 @@ class Esi extends Ccp\AbstractCcp implements EsiInterface {
     /**
      * @param array $categories
      * @param string $search
+     * @param int $characterId
+     * @param string $accessToken
      * @param bool $strict
      * @return RequestConfig
      */
-    protected function searchRequest(array $categories, string $search, bool $strict = false) : RequestConfig {
+    protected function searchRequest(array $categories, string $search, int $characterId, string $accessToken, bool $strict = false) : RequestConfig {
         $query = [
             'categories'            => $categories,
             'search'                => $search,
@@ -954,8 +956,8 @@ class Esi extends Ccp\AbstractCcp implements EsiInterface {
         ]);
 
         return new RequestConfig(
-            WebClient::newRequest('GET', $this->getEndpointURI(['search', 'GET'])),
-            $this->getRequestOptions('', null, $query),
+            WebClient::newRequest('GET', $this->getEndpointURI(['search', 'GET'], [$characterId])),
+            $this->getRequestOptions($accessToken, null, $query),
             function($body) : array {
                 $searchData = [];
                 if(!$body->error){
