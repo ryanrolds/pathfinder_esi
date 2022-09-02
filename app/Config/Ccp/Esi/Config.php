@@ -158,7 +158,7 @@ class Config extends AbstractConfig {
             ]
         ],
         'search' => [
-            'GET' => '/v2/search/'
+            'GET' => '/v3/characters/{x}/search/'
         ]
     ];
 }
