@@ -12,7 +12,7 @@ class Connection extends AbstractIterator {
      */
     protected static $map = [
         'id'                                => 'id',
-        'type'                              => 'signature_type',
+        'signature_type'                    => 'type',
 
         'completed'                         => ['state' => 'name'],
         'updated_at'                        => ['state' => 'updated'],
