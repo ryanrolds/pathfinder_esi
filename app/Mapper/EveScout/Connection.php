@@ -17,8 +17,12 @@ class Connection extends AbstractIterator {
         'completed'                         => ['state' => 'name'],
         'updated_at'                        => ['state' => 'updated'],
 
-        'out_system_id'                     => 'source',
-        'in_system_id'                      => 'target',
+        'out_system_id'                     => ['source' => 'id'],
+        'out_system_name'                   => ['source' => 'name'],
+
+        'in_system_id'                     => ['target' => 'id'],
+        'in_system_name'                   => ['target' => 'name'],
+        'in_system_class'                  => ['target' => 'system_class'],
 
         'out_signature'                     => ['sourceSignature' => 'name'],
         'wh_type'                           => ['sourceSignature' => 'type'],
