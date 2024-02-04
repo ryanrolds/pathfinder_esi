@@ -25,17 +25,16 @@ class Connection extends AbstractIterator {
         'in_system_class'                  => ['target' => 'system_class'],
 
         'out_signature'                     => ['sourceSignature' => 'name'],
-        'wh_type'                           => ['sourceSignature' => 'type'],
-        
         'in_signature'                      => ['targetSignature' => 'name'],
-        'wh_type'                           => ['targetSignature' => 'type'],
 
         'remaining_hours'                   => ['wormhole' => 'estimatedEol'],
         'max_ship_size'                     => ['wormhole' => 'jumpMass'],
 
         'created_at'                        => 'created',
         'updated_at'                        => 'updated',
+        
         'wh_exits_outward'                  => 'wh_exits_outward',
+        'wh_type'                           => 'wh_type',
 
         'created_by_id'                     => ['character' => 'id'],
         'created_by_name'                   => ['character' => 'name']
