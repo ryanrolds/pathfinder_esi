@@ -26,6 +26,7 @@ class Connection extends AbstractIterator {
 
         'out_signature'                     => ['sourceSignature' => 'name'],
         'wh_type'                           => ['sourceSignature' => 'type'],
+        'max_ship_size'                     => ['sourceSignature' => 'jumpMass'],
 
         'in_signature'                      => ['targetSignature' => 'name'],
         'wh_type'                           => ['targetSignature' => 'type'],
