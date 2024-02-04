@@ -35,7 +35,7 @@ class Connection extends AbstractIterator {
 
         'created_at'                        => 'created',
         'updated_at'                        => 'updated',
-        'exits_outward'                     => 'exits_outward',
+        'wh_exits_outward'                  => 'wh_exits_outward',
 
         'created_by_id'                     => ['character' => 'id'],
         'created_by_name'                   => ['character' => 'name']
