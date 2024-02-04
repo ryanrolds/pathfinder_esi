@@ -30,13 +30,12 @@ class Connection extends AbstractIterator {
         'in_signature'                      => ['targetSignature' => 'name'],
         'wh_type'                           => ['targetSignature' => 'type'],
 
-        // 'mass'                           => ['wormhole' => 'mass'], THIS NO LONGER EXISTS
-        // 'wormholeEol'                    => ['wormhole' => 'eol'], THIS NO LONGER EXISTS
         'remaining_hours'                   => ['wormhole' => 'estimatedEol'],
         'max_ship_size'                     => ['wormhole' => 'jumpMass'],
 
         'created_at'                        => 'created',
         'updated_at'                        => 'updated',
+        'exits_outward'                     => 'exits_outward',
 
         'created_by_id'                     => ['character' => 'id'],
         'created_by_name'                   => ['character' => 'name']
