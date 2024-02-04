@@ -26,14 +26,14 @@ class Connection extends AbstractIterator {
 
         'out_signature'                     => ['sourceSignature' => 'name'],
         'wh_type'                           => ['sourceSignature' => 'type'],
-        'max_ship_size'                     => ['sourceSignature' => 'jumpMass'],
-
+        
         'in_signature'                      => ['targetSignature' => 'name'],
         'wh_type'                           => ['targetSignature' => 'type'],
 
         // 'mass'                           => ['wormhole' => 'mass'], THIS NO LONGER EXISTS
         // 'wormholeEol'                    => ['wormhole' => 'eol'], THIS NO LONGER EXISTS
         'remaining_hours'                   => ['wormhole' => 'estimatedEol'],
+        'max_ship_size'                     => ['wormhole' => 'jumpMass'],
 
         'created_at'                        => 'created',
         'updated_at'                        => 'updated',
