@@ -12,28 +12,31 @@ class Connection extends AbstractIterator {
      */
     protected static $map = [
         'id'                                => 'id',
-        'type'                              => 'type',
+        'signature_type'                    => 'type',
 
-        'status'                            => ['state' => 'name'],
-        'statusUpdatedAt'                   => ['state' => 'updated'],
+        'completed'                         => ['state' => 'name'],
+        'updated_at'                        => ['state' => 'updated'],
 
-        'sourceSolarSystem'                 => 'source',
-        'destinationSolarSystem'            => 'target',
+        'out_system_id'                     => ['source' => 'id'],
+        'out_system_name'                   => ['source' => 'name'],
 
-        'signatureId'                       => ['sourceSignature' => 'name'],
-        'sourceWormholeType'                => ['sourceSignature' => 'type'],
+        'in_system_id'                     => ['target' => 'id'],
+        'in_system_name'                   => ['target' => 'name'],
+        'in_system_class'                  => ['target' => 'system_class'],
 
-        'wormholeDestinationSignatureId'    => ['targetSignature' => 'name'],
-        'destinationWormholeType'           => ['targetSignature' => 'type'],
+        'out_signature'                     => ['sourceSignature' => 'name'],
+        'in_signature'                      => ['targetSignature' => 'name'],
 
-        'wormholeMass'                      => ['wormhole' => 'mass'],
-        'wormholeEol'                       => ['wormhole' => 'eol'],
-        'wormholeEstimatedEol'              => ['wormhole' => 'estimatedEol'],
+        'remaining_hours'                   => ['wormhole' => 'estimatedEol'],
+        'max_ship_size'                     => ['wormhole' => 'jumpMass'],
 
-        'createdAt'                         => 'created',
-        'updatedAt'                         => 'updated',
+        'created_at'                        => 'created',
+        'updated_at'                        => 'updated',
+        
+        'wh_exits_outward'                  => 'wh_exits_outward',
+        'wh_type'                           => 'wh_type',
 
-        'createdById'                       => ['character' => 'id'],
-        'createdBy'                         => ['character' => 'name']
+        'created_by_id'                     => ['character' => 'id'],
+        'created_by_name'                   => ['character' => 'name']
     ];
 }
