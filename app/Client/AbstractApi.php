@@ -16,7 +16,6 @@ use Exodus4D\ESI\Lib\Stream\JsonStreamInterface;
 use Exodus4D\ESI\Lib\Middleware\GuzzleJsonMiddleware;
 use Exodus4D\ESI\Lib\Middleware\GuzzleLogMiddleware;
 use Exodus4D\ESI\Lib\Middleware\GuzzleCacheMiddleware;
-use Exodus4D\ESI\Lib\Middleware\GuzzleRetryMiddleware;
 use Exodus4D\ESI\Lib\Middleware\Cache\Storage\CacheStorageInterface;
 use Exodus4D\ESI\Lib\Middleware\Cache\Storage\Psr6CacheStorage;
 use Exodus4D\ESI\Lib\Middleware\Cache\Strategy\CacheStrategyInterface;
@@ -25,6 +24,7 @@ use Exodus4D\ESI\Config\ConfigInterface;
 use GuzzleHttp\Exception\TransferException;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\HandlerStack;
+use GuzzleRetry\GuzzleRetryMiddleware;
 use Psr\Http\Message\StreamInterface;
 
 abstract class AbstractApi extends \Prefab implements ApiInterface {
